@@ -1,0 +1,322 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header Styles */
+header.hero {
+  background: linear-gradient(135deg, #ff5e62, #ff9966, #fff);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+header.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  animation: fadeInText 1s ease-out;
+}
+
+header.hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeInText 1.5s ease-out;
+}
+
+/* Fade-in and Text Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Styles */
+nav.topnav {
+  background-color: #3f3939;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav.topnav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 15px 0;
+  margin: 0;
+}
+
+nav.topnav li {
+  margin: 0 20px;
+}
+
+nav.topnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav.topnav a:hover {
+  color: #ff5e62;
+  transform: scale(1.1);
+}
+
+/* Main Content Styles */
+main {
+  padding: 40px 20px;
+}
+
+.about-me-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-text {
+  width: 60%;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.profile {
+  width: 30%;
+  min-width: 200px;
+  text-align: center;
+  align-self: flex-start;
+}
+
+#profile-picture {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.profile-info {
+  margin-top: 20px;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.profile-info h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+}
+
+
+/* Section Styling */
+section.intro, section.projects, section.experience, section.blog-posts {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+section.intro:hover,
+section.projects:hover,
+section.experience:hover,
+section.blog-posts:hover {
+  transform: translateY(-5px); /* Small lift effect */
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+}
+
+.project, .job, .post {
+  margin-bottom: 30px;
+}
+
+.project h3, .job h3, .post h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project a, .post a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.project a:hover, .post a:hover {
+  text-decoration: underline;
+}
+
+.project img, .post img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project img:hover, .post img:hover {
+  transform: scale(1.05);
+}
+
+/* Card Layout for Projects, Work, Blog */
+.project, .job, .post {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover, .job:hover, .post:hover {
+  transform: translateY(-10px); /* Hover lift effect */
+}
+
+.project img {
+  border-radius: 8px;
+}
+
+/* Contact Form Styles */
+.contact-form input, .contact-form textarea, .contact-form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e63d7b;
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .contact-form button:focus {
+  outline: none;
+  border-color: #ff4081;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff4081;
+}
+
+/* Social Media Icons in Footer */
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  margin: 0 15px;
+  font-size: 1.5rem;
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2.5rem;
+  }
+
+  header.hero p {
+    font-size: 1.2rem;
+  }
+
+  nav.topnav ul {
+    flex-direction: column;
+  }
+
+  nav.topnav li {
+    margin: 10px 0;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .project h3, .job h3, .post h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-form button {
+    padding: 15px;
+  }
+
+  footer .social-icons a {
+    font-size: 1.2rem;
+  }
+}
