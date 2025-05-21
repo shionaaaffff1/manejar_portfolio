@@ -320,3 +320,78 @@ footer .social-icons a:hover {
     font-size: 1.2rem;
   }
 }
+
+/* Blog Post Content Enhancements */
+.post h4 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #ff5e62;
+  border-left: 5px solid #ff9966;
+  padding-left: 10px;
+}
+
+.post ol {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.post ol li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.post ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.post ul li {
+  list-style-type: square;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.post p em {
+  display: block;
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+  text-align: center;
+}
+
+.post p strong {
+  color: #222;
+}
+
+.post p {
+  text-align: justify;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Badge-like indicators for "Estimated Reading Time", etc. */
+.post p strong::before {
+  content: "📌 ";
+  color: #ff4081;
+}
+
+/* Make emoji section headers slightly larger */
+.post h4::before {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+/* Extra hover effect for post links */
+.post a {
+  transition: all 0.3s ease-in-out;
+}
+
+.post a:hover {
+  color: #e63d7b;
+  text-decoration: underline;
+}
